@@ -5,9 +5,9 @@ const {connection} =require("./db/db");
 const { tripRoutes } = require("./Routes/trip.route");
 
 const app = express();
-
+const cors =require("cors")
 app.use(express.json());
-
+app.use(cors())
 app.get("/",(req,res)=>{
   res.send("Home Page")
 })
